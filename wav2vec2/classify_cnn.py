@@ -20,6 +20,9 @@ from torch.utils.data import Dataset, DataLoader
 DATA_DIR = sys.argv[1]  # your embeddings directory
 SAVE_DIR = sys.argv[2]
 os.makedirs(SAVE_DIR, exist_ok=True)
+
+############# change class folder name accordingly
+
 CLASS_NAMES = ['verylow', 'low', 'medium']
 
 batch_size = 64
@@ -37,6 +40,8 @@ for class_label in CLASS_NAMES:
     for file in os.listdir(class_path):
         if file.endswith(".npy"):
             emb_path = os.path.join(class_path, file)
+            #speaker_id = file.split('_')[0][:3] # ssn_tdsc spk_id 
+            #speaker_id = file.split('_')[0] # ua speech
             speaker_id = file.split('_')[2][:3]  # e.g., M01
             embedding = np.load(emb_path)
             data[class_label][speaker_id].append(embedding)
