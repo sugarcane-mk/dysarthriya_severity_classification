@@ -25,7 +25,9 @@ for class_label in CLASS_NAMES:
     for file in os.listdir(class_path):
         if file.endswith(".npy"):
             emb_path = os.path.join(class_path, file)
-            speaker_id = file.split('_')[2][:3]  # extract the first three characters from the third field  wav_headMic_M01S01_0005_embedding.npy
+            #speaker_id = file.split('_')[0][:3] # ssn_tdsc
+            #speaker_id = file.split('_')[0] # ua speech
+            speaker_id = file.split('_')[2][:3]  # extract the first three characters from the third field  wav_headMic_M01S01_0005_embedding.npy torgo
             embedding = np.load(emb_path)
             data[class_label][speaker_id].append(embedding)
 
