@@ -32,3 +32,8 @@ Best Accuracy: 0.7484
 verylow: 0.8255
 low: 0.0640
 medium: 0.4619
+
+=== Computed Class-wise Accuracy (based on recall) ===
+verylow: 0.7988
+low: 0.0725
+medium: 0.6897

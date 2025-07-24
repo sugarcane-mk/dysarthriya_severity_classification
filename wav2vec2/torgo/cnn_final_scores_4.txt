@@ -1,0 +1,34 @@
+
+=== Average Classification Report ===
+
+Class: verylow
+precision: 0.2042
+recall: 0.0532
+f1-score: 0.0586
+support: 310.5000
+
+Class: low
+precision: 0.4528
+recall: 0.6773
+f1-score: 0.5089
+support: 362.6667
+
+Class: medium
+precision: 0.7563
+recall: 0.7411
+f1-score: 0.7206
+support: 415.6667
+
+=== Accuracy Summary ===
+Average Accuracy: 0.5144
+Standard Deviation: 0.1190
+
+=== Class-wise Accuracy ===
+verylow: 0.2394
+low: 0.4546
+medium: 0.7783
+
+=== Computed Class-wise Accuracy (based on recall) ===
+verylow: 0.0532
+low: 0.6773
+medium: 0.7411
